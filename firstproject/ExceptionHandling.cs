@@ -13,14 +13,16 @@ namespace firstproject
         public ExceptionHandling() {
             try
             {
-                int c = a / b;
+                //int c = a / b;
+                new AgeLimitCheck(-1);
             }
             catch(DivideByZeroException de)
             {
                 Console.WriteLine("Dividing by zero");
             }
-            catch(Exception e) {
-                Console.WriteLine("General exception called");
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
             finally {
                 Console.WriteLine("finally called");
