@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            GenericTypeEx<int>  geInt = new GenericTypeEx<int>(1);
-            GenericTypeEx<string>  geString = new GenericTypeEx<string>("hello");
+        GenericMethodEx gme = new GenericMethodEx();
+            gme.TestFunction("Hello");
+            gme.TestFunction(1);
         }
     }
 }
