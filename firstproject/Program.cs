@@ -4,12 +4,15 @@
     {
         static void Main(string[] args)
         {
-            int[] arr = { 1, 2, 3, 4,1,2};
-            char[] charArr = { 'a', 'b','b'};
-            FindDuplicateCount<int> findDupCount = new FindDuplicateCount<int>(arr);
-            Console.WriteLine( findDupCount.GetCount());
-            FindDuplicateCount<char> findDupCountChar = new FindDuplicateCount<char>(charArr);
-            Console.WriteLine( findDupCountChar.GetCount());
+            int i = 0;
+            int[] arr1 = {1,2,3,5};
+            int[] arr2 = { 2, 4, 6 };
+            MergeSortedArray mr = new MergeSortedArray(arr1, arr2,4,3);
+            int[] arr = mr.MergeArray();
+            foreach (int x in arr)
+            {
+                Console.Write(x);
+            }
         }
     }
 }
