@@ -1,5 +1,4 @@
-﻿
-namespace firstproject
+﻿namespace firstproject
 {
     internal class Program
     {
@@ -13,14 +12,17 @@ namespace firstproject
         }
         public void DisplayStudent()
         {
-            Console.WriteLine("details of student \nName :" + this.Name);
+            Console.WriteLine("details of student \nName: " + this.Name);
             Console.WriteLine("Id: "+this.Id);
             Console.WriteLine("Department: "+this.Department);
         }
+        ~Program()
+        {
+            Console.WriteLine("Destructor was called");
+        }
         static void Main(string[] args)
         {
-            Program myProgram = new Program("gokul",2,"Mechatronics");
-            myProgram.DisplayStudent();
+            Destructor ds = new Destructor();
         }
     }
 }
