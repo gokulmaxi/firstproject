@@ -4,12 +4,9 @@
     {
         static void Main(string[] args)
         {
-            int a = 10;
-            do
-            {
-                Console.WriteLine(a);
-                a--;
-            } while (a > 5);
+            string a = "Hello";
+            string b = "World!";
+            Console.WriteLine(a+b.Substring(0,3));
         }
     }
 }
