@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            SortedSetEx sse = new SortedSetEx();
+            StackEx ss = new StackEx(); 
         }
     }
 }
