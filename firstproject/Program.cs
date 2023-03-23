@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-                ExceptionHandling ex = new ExceptionHandling();
+            GenericTypeEx<int>  geInt = new GenericTypeEx<int>(1);
+            GenericTypeEx<string>  geString = new GenericTypeEx<string>("hello");
         }
     }
 }
