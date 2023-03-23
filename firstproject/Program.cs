@@ -4,9 +4,7 @@
     {
         static void Main(string[] args)
         {
-        GenericMethodEx gme = new GenericMethodEx();
-            gme.TestFunction("Hello");
-            gme.TestFunction(1);
+            SortedSetEx sse = new SortedSetEx();
         }
     }
 }
