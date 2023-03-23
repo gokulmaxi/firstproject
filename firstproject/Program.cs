@@ -6,12 +6,16 @@
         {
             int i = 0;
             int[] arr1 = {1,2,3,5};
-            int[] arr2 = { 2, 4, 6 };
-            MergeSortedArray mr = new MergeSortedArray(arr1, arr2,4,3);
-            int[] arr = mr.MergeArray();
-            foreach (int x in arr)
+            SplitEvenOdd seo = new SplitEvenOdd(arr1);
+            seo.SplitArray();
+            foreach (var item in seo.evenList)
             {
-                Console.Write(x);
+                Console.Write(item+",");
+            }
+            Console.WriteLine();
+            foreach (var item in seo.oddList)
+            {
+                Console.Write(item+",");
             }
         }
     }
