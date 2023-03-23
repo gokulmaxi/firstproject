@@ -13,16 +13,16 @@ namespace firstproject
         stack1.Push("A");
         stack1.Push("B");
         stack1.Push("C");
-            foreach (string s in stack1)
-            {
-                Console.WriteLine(s);
-            }
+        foreach (string s in stack1)
+        {
+            Console.WriteLine(s);
+        }
         stack1.Pop();
-            Console.WriteLine("after pop");
-            foreach (string s in stack1)
-            {
-                Console.WriteLine(s);
-            }
+        Console.WriteLine("after pop");
+        foreach (string s in stack1)
+        {
+            Console.WriteLine(s);
+        }
         }
     }
 }

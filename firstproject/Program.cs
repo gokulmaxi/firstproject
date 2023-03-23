@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            StackEx ss = new StackEx(); 
+            QueueEx queueEx = new QueueEx();
         }
     }
 }
