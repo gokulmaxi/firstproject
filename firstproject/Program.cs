@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            exFirstAndLast stringEx = new exFirstAndLast("hello"); 
-            Console.WriteLine(stringEx.exchange());
+            AddFAndB afb = new AddFAndB("hello");
+            Console.WriteLine(afb.addFandB());
         }
     }
 }
