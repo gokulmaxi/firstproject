@@ -17,12 +17,14 @@ namespace firstproject
             Sd.Add("d", "dog");
             Sd.Add("1", "one");
             Sd.Add("2", "");
+            
             foreach (var key in Sd)
             {
                 Console.WriteLine(key.Key+":"+key.Value);
             }
             foreach(var item in Sd.OrderBy(x => x.Value))
             {
+             
                 if(item.Value == "one")
                 {
                     Sd.Remove(item.Key);

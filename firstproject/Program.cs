@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            new SortedDictEx();
+            exFirstAndLast stringEx = new exFirstAndLast("hello"); 
+            Console.WriteLine(stringEx.exchange());
         }
     }
 }
