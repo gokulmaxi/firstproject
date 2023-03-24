@@ -1,11 +1,10 @@
-﻿namespace firstproject
-{
+﻿namespace firstproject {
     internal class Program
     {
         static void Main(string[] args)
         {
-            AddFAndB afb = new AddFAndB("hello");
-            Console.WriteLine(afb.addFandB());
+            StringOk so = new StringOk("hellokasokdf");
+            Console.Write( so.findAndRemoveOK());
         }
     }
 }
