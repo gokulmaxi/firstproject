@@ -15,7 +15,12 @@ namespace firstproject
             keyValuePairs.Add(3, "dsf");
             keyValuePairs.Add(4, "hid");
             keyValuePairs.Add(5, "gist");
-            Console.WriteLine(keyValuePairs.ContainsValue("prabhu"));
+         keyValuePairs.Remove(1);
+            keyValuePairs[5] = "NOt";
+            foreach(KeyValuePair<int,string> pair in keyValuePairs)
+            {
+                Console.WriteLine(pair.Key +":" +pair.Value);
+            }
         }
     }
 }
