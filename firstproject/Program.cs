@@ -3,8 +3,7 @@
     {
         static void Main(string[] args)
         {
-            StringOk so = new StringOk("hellokasokdf");
-            Console.Write( so.findAndRemoveOK());
+            new DelegateEx(1, 2);
         }
     }
 }
