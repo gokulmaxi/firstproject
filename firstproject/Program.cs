@@ -3,7 +3,7 @@
     {
         static void Main(string[] args)
         {
-            new DelegateEx(1, 2);
+            new AnonFunc();
         }
     }
 }
