@@ -1,9 +1,12 @@
 ﻿namespace firstproject {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            new InbuiltDelegates();
+            Task<int> task = AsyncEx.Method1();    
+            Task<int> task2 = AsyncEx.Method2();
+            await task;
+            await task2;
         }
     }
 }

@@ -12,8 +12,7 @@ namespace firstproject
         public InbuiltDelegates() {
             printSomeStuff d= HelloWorld;
             d.Invoke();
-            Action<string> s2 = (msg) => Console.WriteLine(msg);
-            s2("Hello");
+            Action<string> s2=(msg) => Console.WriteLine(msg);
         }
         public void HelloWorld()
         {
