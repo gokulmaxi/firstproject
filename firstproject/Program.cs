@@ -4,7 +4,7 @@
         static async Task Main(string[] args)
         {
             //           new PokerHandling();
-            new SqlConEx();
+            new NicoCipher();
         }
     }
 }
