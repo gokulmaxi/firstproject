@@ -7,13 +7,15 @@ namespace firstproject
     {
         private SqlConnection conn;
         public SqlConEx() {
-            conn = new SqlConnection("Data Source=localhost;Initial Catalog=students;Integrated Security=True;Encrypt=False");
-            //   InsertSQL();
-            // selectSQL();
-            //DeleteSQL();
-            //selectSQL();
-                UpdateSQL();
-                selectSQL();
+            conn = new SqlConnection("Data Source=localhost;Initial Catalog=master;Integrated Security=True;Encrypt=False");
+            //         InsertSQL();
+            //         selectSQL();
+            //         DeleteSQL();
+            //         selectSQL();
+            //         UpdateSQL();
+            //         selectSQL();
+            CallStoreProcedure();
+            selectSQLEmployee();
         }
         public void selectSQL()
         {
@@ -24,6 +26,18 @@ namespace firstproject
             while (reader.Read())
             {
                 Console.WriteLine("ID "+ reader.GetInt32(0)+"name:"+reader.GetString(1)+"age:"+reader.GetInt32(4));
+            }
+            conn.Close();
+        }
+        public void selectSQLEmployee()
+        {
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM EmployeeLatest";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Console.WriteLine("ID " + reader.GetInt32(0) + "name:" + reader.GetString(1)+"salary:"+reader.GetString(6));
             }
             conn.Close();
         }
@@ -57,6 +71,19 @@ namespace firstproject
             cmd.CommandText = $"UPDATE studentData set age = 25 WHERE id = 3";
             cmd.ExecuteReader() ;
             conn.Close();
+        }
+        public void  CallStoreProcedure()
+        {
+            conn.Open();
+            string procedureName = "updateWithIdFromEmployeeLatest";
+            using (SqlCommand cmd = new SqlCommand(procedureName, conn))
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Add("@emp_id",System.Data.SqlDbType.Int).Value=1;
+                cmd.Parameters.Add("@salaryInp",System.Data.SqlDbType.Int).Value=900;
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close() ;
         }
     }
 }
